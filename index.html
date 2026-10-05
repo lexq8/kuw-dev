@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#050608">
+  <meta name="description" content="القمر، بين يديك. تجربة تفاعلية ثلاثية الأبعاد باستخدام خرائط NASA.">
+  <title>القمر · KUW.DEV</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23050608'/%3E%3Ccircle cx='32' cy='32' r='21' fill='%23d8d6cf'/%3E%3Ccircle cx='25' cy='26' r='6' fill='%239b9c99'/%3E%3Ccircle cx='37' cy='39' r='8' fill='%23b9b9b2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+</head>
+<body>
+  <main class="observatory" aria-label="استكشاف القمر">
+    <header class="masthead">
+      <a class="wordmark" href="./" aria-label="KUW.DEV" dir="ltr"><span class="brand-orbit" aria-hidden="true"></span>KUW<span class="brand-suffix">.DEV</span></a>
+      <span class="edition" dir="ltr">001 <span class="edition-slash">/</span> <span class="edition-full">LUNAR EXPLORER</span><span class="edition-short">MOON</span></span>
+    </header>
+
+    <section id="viewport" class="viewport" aria-label="مجسم القمر التفاعلي">
+      <canvas id="moon-canvas" tabindex="0" role="img" aria-label="القمر ثلاثي الأبعاد. اسحب لتدويره، واستخدم عجلة الماوس للتقريب. يمكنك أيضًا استخدام مفاتيح الأسهم وعلامتي زائد وناقص." aria-describedby="gesture-help"></canvas>
+      <div class="loading" id="loading" role="status">
+        <span class="loading-orbit" aria-hidden="true"></span>
+        <p id="loading-message">نقترب من القمر…</p>
+        <span class="loading-note">لحظات وتظهر التفاصيل</span>
+      </div>
+      <div id="error" class="error-state" role="alert" hidden>
+        <span class="error-moon" aria-hidden="true">◒</span>
+        <h2 id="error-title">تعذّر عرض القمر</h2>
+        <p id="error-message">جرّب تحديث الصفحة أو فتحها في متصفح آخر يدعم العرض ثلاثي الأبعاد.</p>
+        <button id="retry" class="text-button" type="button">إعادة المحاولة</button>
+      </div>
+    </section>
+
+    <aside class="identity" aria-label="عنوان التجربة">
+      <p class="eyebrow" dir="ltr">OUR ONLY NATURAL SATELLITE</p>
+      <h1>القمر<span class="title-dot">.</span></h1>
+      <p class="gesture-help" id="gesture-help">اسحب لتستكشف. قرّب لتكتشف.</p>
+    </aside>
+
+    <div class="toolbar" id="toolbar" role="group" aria-label="أدوات استكشاف القمر" inert>
+      <div class="light-control">
+        <label for="sunlight"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>ضوء الشمس</label>
+        <input id="sunlight" type="range" min="-155" max="155" value="-35" step="1" dir="ltr" aria-label="زاوية ضوء الشمس">
+        <output id="sun-value" for="sunlight" dir="ltr">−35°</output>
+      </div>
+      <div class="toolbar-bottom">
+        <button id="spin" class="spin-button" type="button" aria-pressed="true" title="إيقاف الدوران التلقائي">
+          <svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14m8-14v14"/></svg>
+          <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="m9 5 10 7-10 7Z"/></svg>
+          <span id="spin-label">إيقاف الدوران</span>
+        </button>
+        <div class="zoom-controls" dir="ltr" role="group" aria-label="التقريب والإبعاد">
+          <button id="zoom-out" type="button" title="إبعاد" aria-label="إبعاد"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg></button>
+          <output id="zoom-level" aria-label="مستوى التقريب">1.0×</output>
+          <button id="zoom-in" type="button" title="تقريب" aria-label="تقريب"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12m-6-6v12"/></svg></button>
+        </div>
+        <button id="reset" class="icon-button" type="button" title="إعادة المشهد" aria-label="إعادة المشهد"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></svg></button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span class="footer-caption">بعيدٌ عن الأرض. قريبٌ منك.</span>
+      <a href="https://svs.gsfc.nasa.gov/4720/" target="_blank" rel="noopener noreferrer" class="credits" title="خرائط القمر: NASA’s Scientific Visualization Studio" dir="ltr">LUNAR DATA <span>NASA / LRO</span></a>
+    </footer>
+    <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+  </main>
+  <noscript><div class="noscript-message">تحتاج هذه التجربة إلى تفعيل JavaScript في متصفحك.</div></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
