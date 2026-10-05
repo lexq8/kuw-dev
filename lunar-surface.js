@@ -163,6 +163,31 @@ async function prepareGeometry(geometry, layout, signal, onProgress) {
   return meanRadius;
 }
 
+function uploadTexture(renderer, texture) {
+  // CPU-only adapters prepare materials without uploads. An actual uploader must expose GL status.
+  if (typeof renderer?.initTexture !== 'function') return;
+  const context = renderer.getContext?.();
+  if (!context || typeof context.getError !== 'function' || typeof context.isContextLost !== 'function') {
+    throw new Error('The WebGL context cannot verify the lunar texture upload.');
+  }
+  if (context.isContextLost()) throw new Error('The WebGL context was lost before the lunar texture upload.');
+  const noError = context.NO_ERROR ?? 0;
+  const contextLost = context.CONTEXT_LOST_WEBGL ?? 0x9242;
+  let clean = false;
+  // Clear unrelated error flags first, with a fixed upper bound for broken contexts or adapters.
+  for (let read = 0; read < 8; read++) {
+    const error = context.getError();
+    if (error === contextLost) throw new Error('The WebGL context was lost before the lunar texture upload.');
+    if (error === noError) { clean = true; break; }
+  }
+  if (!clean) throw new Error('Existing WebGL errors could not be cleared before the lunar texture upload.');
+  renderer.initTexture(texture);
+  const error = context.getError();
+  if (context.isContextLost() || error !== noError) {
+    throw new Error(`The lunar texture upload failed (WebGL error ${error}).`);
+  }
+}
+
 /**
  * Takes ownership of a single NASA mesh and prepares its shared-buffer native tile materials.
  * The returned dispose() owns the mesh, its source resources, and textures supplied to setTileTexture().
@@ -258,7 +283,7 @@ export async function createLunarSurface(sourceMesh, renderer, { color, signal, 
         texture.offset.set((layout.gutter - column * layout.tileSize) / layout.dimension, (layout.gutter - row * layout.tileSize) / layout.dimension);
         texture.updateMatrix();
         texture.needsUpdate = true;
-        try { renderer?.initTexture?.(texture); } catch (error) { owner.disposeTexture(texture); throw error; }
+        try { uploadTexture(renderer, texture); } catch (error) { owner.disposeTexture(texture); throw error; }
         const previous = material.map;
         material.map = texture;
         material.needsUpdate = true;
