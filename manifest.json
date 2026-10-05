@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 1,
+  "color": {
+    "width": 27360,
+    "height": 13680,
+    "columns": 4,
+    "rows": 2,
+    "tileSize": 6840,
+    "gutter": 2,
+    "format": "png",
+    "sourceBitDepth": 16,
+    "displayBitDepth": 8,
+    "colorSpace": "srgb",
+    "spatialResolutionPreserved": true,
+    "spatialResampling": "none",
+    "gutters": {
+      "longitude": "wrap",
+      "latitude": "clamp"
+    },
+    "sourceUrl": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_16bit_srgb.tif",
+    "sourcePage": "https://svs.gsfc.nasa.gov/4720",
+    "sourceFile": "lroc_color_16bit_srgb.tif",
+    "sourceBytes": 2618490100,
+    "sourceSha256": "4be1ed002f72c2a96ab245af64cf8a84c560d5498a2a7e7e3b568d38e2833752",
+    "credit": "NASA's Scientific Visualization Studio; LRO / LROC / LOLA",
+    "license": "NASA SVS content is public domain unless otherwise noted; acknowledge NASA without implying endorsement.",
+    "conversionStatistics": {
+      "sourceMin": 0,
+      "sourceMax": 65535,
+      "displayMin": 0,
+      "displayMax": 255,
+      "displayMeanRgb": [
+        190.51594,
+        185.92264,
+        182.49107
+      ],
+      "conversion": "round(source_srgb_16bit / 257); no gamma change or spatial resampling",
+      "iccProfilePreserved": true
+    },
+    "tiles": [
+      {
+        "file": "color-r0-c0.png",
+        "row": 0,
+        "column": 0,
+        "x": 0,
+        "y": 0,
+        "width": 6840,
+        "height": 6840,
+        "encodedWidth": 6844,
+        "encodedHeight": 6844,
+        "bytes": 53130535,
+        "sha256": "a1f08f501cca30cb42f106c0bfb4a8e327f287dd776038ef0c4860ed15e50b57",
+        "chunks": [
+          {
+            "file": "color-r0-c0.png.part-0001",
+            "bytes": 20971520,
+            "sha256": "ba5a7cb388cc8c46cfc892ffb5680c99f277095a9b0e261407a5b5713f1d4cfb"
+          },
+          {
+            "file": "color-r0-c0.png.part-0002",
+            "bytes": 20971520,
+            "sha256": "fdbe0e18c977094ae383d7932b6f385d1b0ff755bc5a77481572e61204b1c5f5"
+          },
+          {
+            "file": "color-r0-c0.png.part-0003",
+            "bytes": 11187495,
+            "sha256": "05ae5cff4291efef96b0b46e33a7357d3b309d902128a071bb383b64232bb747"
+          }
+        ]
+      },
+      {
+        "file": "color-r0-c1.png",
+        "row": 0,
+        "column": 1,
+        "x": 6840,
+        "y": 0,
+        "width": 6840,
+        "height": 6840,
+        "encodedWidth": 6844,
+        "encodedHeight": 6844,
+        "bytes": 49519813,
+        "sha256": "bd90173cec146ece7ae382b800b6b524bb233a68fe75cab21885c43963c0674b",
+        "chunks": [
+          {
+            "file": "color-r0-c1.png.part-0001",
+            "bytes": 20971520,
+            "sha256": "710194309b08a4a9a86df3b3db9b860dccd600836076676e5733c89953893a84"
+          },
+          {
+            "file": "color-r0-c1.png.part-0002",
+            "bytes": 20971520,
+            "sha256": "da5e32f0e224f97ea6478fa0d5ee34df16574c5ccbc38644f3a84868e6548f25"
+          },
+          {
+            "file": "color-r0-c1.png.part-0003",
+            "bytes": 7576773,
+            "sha256": "dfb92192c4e6cd095fdea0a811ebe0c02be5076ad4bed155700c8bbcf946df98"
+          }
+        ]
+      },
+      {
+        "file": "color-r0-c2.png",
+        "row": 0,
+        "column": 2,
+        "x": 13680,
+        "y": 0,
+        "width": 6840,
+        "height": 6840,
+        "encodedWidth": 6844,
+        "encodedHeight": 6844,
+        "bytes": 52522221,
+        "sha256": "f0c67acd79d0bbc01b66f9f3b3969311e0880c94b6b47ab0fe4707bd42ec6bf8",
+        "chunks": [
+          {
+            "file": "color-r0-c2.png.part-0001",
+            "bytes": 20971520,
+            "sha256": "83a81e2a29e3b2914c918f984505ac6021858b6cd143ad41b650a78e9f5d413a"
+          },
+          {
+            "file": "color-r0-c2.png.part-0002",
+            "bytes": 20971520,
+            "sha256": "7160843fcfffce647a95ea3a9cf6a2800674fae3091bf2d9d7127cab1b08ced1"
+          },
+          {
+            "file": "color-r0-c2.png.part-0003",
+            "bytes": 10579181,
+            "sha256": "93962f05909a5bc1ef97d6655844d6480352d278a1486b1dd5a47d9700f4e2f5"
+          }
+        ]
+      },
+      {
+        "file": "color-r0-c3.png",
+        "row": 0,
+        "column": 3,
+        "x": 20520,
+        "y": 0,
+        "width": 6840,
+        "height": 6840,
+        "encodedWidth": 6844,
+        "encodedHeight": 6844,
+        "bytes": 52896747,
+        "sha256": "beb83ff6912ba4d94c48ddb3e7024e0af417f3eaef95afbc81ca34b7b5c31e29",
+        "chunks": [
+          {
+            "file": "color-r0-c3.png.part-0001",
+            "bytes": 20971520,
+            "sha256": "2b14993cf00d725709e4efbf9e404cd316bed942fc7099b8d725cd8734f84e10"
+          },
+          {
+            "file": "color-r0-c3.png.part-0002",
+            "bytes": 20971520,
+            "sha256": "c8d5ce776ace40caeedc471b75f27df1fa434e3f1df248f3cf9f62431cea2483"
+          },
+          {
+            "file": "color-r0-c3.png.part-0003",
+            "bytes": 10953707,
+            "sha256": "0a12939206b74a0b7c14cd0f7e27c8c49236beb4092d8982e17550981db2f563"
+          }
+        ]
+      },
+      {
+        "file": "color-r1-c0.png",
+        "row": 1,
+        "column": 0,
+        "x": 0,
+        "y": 6840,
+        "width": 6840,
+        "height": 6840,
+        "encodedWidth": 6844,
+        "encodedHeight": 6844,
+        "bytes": 54826456,
+        "sha256": "d44208c6119e32d45c1c73d754331916428610c5f9070500dd1b1cc8a7344ddc",
+        "chunks": [
+          {
+            "file": "color-r1-c0.png.part-0001",
+            "bytes": 20971520,
+            "sha256": "7ed57293bffb2f7615ff77d1993ffd4a51bbb4a72766ac6b0cd35f46376628ca"
+          },
+          {
+            "file": "color-r1-c0.png.part-0002",
+            "bytes": 20971520,
+            "sha256": "dfa3d7d0897b6164428aa280b6e6be6d3ce27ad737fd6e0518f93fe121b8814e"
+          },
+          {
+            "file": "color-r1-c0.png.part-0003",
+            "bytes": 12883416,
+            "sha256": "f31525c3a910e8c565da1ed7af983b0b17cd1f049e7403545819bca502defecf"
+          }
+        ]
+      },
+      {
+        "file": "color-r1-c1.png",
+        "row": 1,
+        "column": 1,
+        "x": 6840,
+        "y": 6840,
+        "width": 6840,
+        "height": 6840,
+        "encodedWidth": 6844,
+        "encodedHeight": 6844,
+        "bytes": 54874915,
+        "sha256": "f36fdc70d141cbc9ee40b409ef5b3d660f3865ec8446c7d4287475160980fa8a",
+        "chunks": [
+          {
+            "file": "color-r1-c1.png.part-0001",
+            "bytes": 20971520,
+            "sha256": "a6592514665cb28991e39146ef1036e97852e6fc73ca36fbcaf40f2008747cdc"
+          },
+          {
+            "file": "color-r1-c1.png.part-0002",
+            "bytes": 20971520,
+            "sha256": "f171170ce630232b9b0c953c64cf443589fbcfae3652e5af530fd0dbae2f24c9"
+          },
+          {
+            "file": "color-r1-c1.png.part-0003",
+            "bytes": 12931875,
+            "sha256": "2fae21a6bf773dc08f303eebe4e03372b1dba0f9c31dbb9b1a1833fff4f67019"
+          }
+        ]
+      },
+      {
+        "file": "color-r1-c2.png",
+        "row": 1,
+        "column": 2,
+        "x": 13680,
+        "y": 6840,
+        "width": 6840,
+        "height": 6840,
+        "encodedWidth": 6844,
+        "encodedHeight": 6844,
+        "bytes": 54647397,
+        "sha256": "c86b944010a36ec2d62d4d58c7046792fcfabc0f685e856d871b973cd07a8bb5",
+        "chunks": [
+          {
+            "file": "color-r1-c2.png.part-0001",
+            "bytes": 20971520,
+            "sha256": "eefd895c84f63e343664d7eb4016bcf1be1e73b071b158cf33b2177fbcc32270"
+          },
+          {
+            "file": "color-r1-c2.png.part-0002",
+            "bytes": 20971520,
+            "sha256": "a38ba6d5dca4823c49ac3ba0bff1cdfd7d0c828da049d29dc58208370c54d4a3"
+          },
+          {
+            "file": "color-r1-c2.png.part-0003",
+            "bytes": 12704357,
+            "sha256": "3e28c5212a7d7d520d7d42ca5927ac0d4e10332ad45a8dfc5073a673aa87b25f"
+          }
+        ]
+      },
+      {
+        "file": "color-r1-c3.png",
+        "row": 1,
+        "column": 3,
+        "x": 20520,
+        "y": 6840,
+        "width": 6840,
+        "height": 6840,
+        "encodedWidth": 6844,
+        "encodedHeight": 6844,
+        "bytes": 54944614,
+        "sha256": "5202caeb6637ed571c3374a2aa933b41e88602cd25bee267bae11b551a83dce9",
+        "chunks": [
+          {
+            "file": "color-r1-c3.png.part-0001",
+            "bytes": 20971520,
+            "sha256": "df6c57d69246b0883eee3cc7946697a28bc048ba71a50d63331f77836865976a"
+          },
+          {
+            "file": "color-r1-c3.png.part-0002",
+            "bytes": 20971520,
+            "sha256": "69c7a3771c0f7e948bd452b5bbf49612f72b5ecb3eaa747390a7a5221c352088"
+          },
+          {
+            "file": "color-r1-c3.png.part-0003",
+            "bytes": 13001574,
+            "sha256": "372e388be89b4575412553d73c7e08ef3a5bb5cbdf340899dd89e48138c9ce20"
+          }
+        ]
+      }
+    ]
+  },
+  "model": {
+    "vertices": 8126284,
+    "triangles": 4063232,
+    "bounds": {
+      "min": [
+        -0.9660080075263977,
+        -0.9727623462677002,
+        -0.9598353505134583
+      ],
+      "max": [
+        0.960516631603241,
+        0.9717345833778381,
+        0.9649819135665894
+      ]
+    },
+    "format": "glb",
+    "gltfVersion": "2.0",
+    "geometryUnmodified": true,
+    "embeddedColor": "8K JPEG supplied by NASA",
+    "northAxis": "+Y",
+    "longitudeZeroAxis": "+X",
+    "textureFlipY": false,
+    "notes": "NASA documents pinched poles as an artifact. Baked terrain effective resolution is unspecified.",
+    "file": "moon-topography.glb",
+    "bytes": 313433084,
+    "sha256": "a9d189e955e32fb42009f1bfbee559e9422d28aa0474e506c7aa33312cc95c8a",
+    "sourceUrl": "https://svs.gsfc.nasa.gov/vis/a010000/a014900/a014959/Moon_NASA_LRO_8k_Topo.glb",
+    "sourcePage": "https://svs.gsfc.nasa.gov/14959",
+    "credit": "NASA's Goddard Space Flight Center",
+    "normals": {
+      "file": "moon-smooth-normals.bin",
+      "bytes": 97515408,
+      "count": 8126284,
+      "itemSize": 3,
+      "componentType": "float32",
+      "endianness": "little",
+      "sha256": "32c1deb0ad2d69497446d6c12997900253629e76fdf5e7a14dff7b6824f21731",
+      "derivation": "area-weighted normals over coincident positions; original terrain unchanged",
+      "sourceModelSha256": "a9d189e955e32fb42009f1bfbee559e9422d28aa0474e506c7aa33312cc95c8a",
+      "derivationStatistics": {
+        "uniquePositions": 2031618,
+        "triangleCount": 4063232,
+        "outwardWoundTriangles": 4063232,
+        "inwardWoundTriangles": 0,
+        "degenerateTriangles": 0,
+        "radialFallbackGroups": 0,
+        "globalWindingFlip": false,
+        "faceOrientationDotSum": 22.469462948851515
+      },
+      "validation": {
+        "maximumUnitLengthError": 5.018592519334675e-08,
+        "meanOutwardDot": 0.9867602326226637,
+        "minimumOutwardDot": 0.18184393332274998,
+        "meanOriginalNormalDot": 0.9942945031602698,
+        "minimumOriginalNormalDot": -0.49706203679329697,
+        "inwardNormalVertices": 0,
+        "opposedToOriginalVertices": 63,
+        "maximumCoincidentNormalSpread": 0.0
+      },
+      "chunks": [
+        {
+          "file": "moon-smooth-normals.bin.part-0001",
+          "bytes": 20971520,
+          "sha256": "a67780161dd55318d8c830339f4a7551fb1e4a1174b0efa7bed6d95134b8a0a3"
+        },
+        {
+          "file": "moon-smooth-normals.bin.part-0002",
+          "bytes": 20971520,
+          "sha256": "8382653902ff582b7f705b62eff533038e4451425849a27caa83e23ba38f1293"
+        },
+        {
+          "file": "moon-smooth-normals.bin.part-0003",
+          "bytes": 20971520,
+          "sha256": "df2bb0f755c3567502d0c54fdaaa66d6881cf1960c69f0b3defa8e1e2b4eb0ec"
+        },
+        {
+          "file": "moon-smooth-normals.bin.part-0004",
+          "bytes": 20971520,
+          "sha256": "db93aea6be64c493c584f08c69cfc6ebf0230ebed9a577f3f06ec457b2ed787c"
+        },
+        {
+          "file": "moon-smooth-normals.bin.part-0005",
+          "bytes": 13629328,
+          "sha256": "ba03e49332154def37a9e3c5255a6d1e4b87327130c610629958e1caec3cb0c3"
+        }
+      ]
+    },
+    "chunks": [
+      {
+        "file": "moon-topography.glb.part-0001",
+        "bytes": 20971520,
+        "sha256": "b794c0a748e91b86626e6225d863a6a20e16ff315bc902e83e1d5c313a4ae806"
+      },
+      {
+        "file": "moon-topography.glb.part-0002",
+        "bytes": 20971520,
+        "sha256": "c24f297922d32e525c163b87eb2d7faa6bae071a723905983a937674ea9bd7fd"
+      },
+      {
+        "file": "moon-topography.glb.part-0003",
+        "bytes": 20971520,
+        "sha256": "f807786746b3e62ad8b41c9b49b6ea9e04d6b849acf768cdd0b28f1b3ff7b86b"
+      },
+      {
+        "file": "moon-topography.glb.part-0004",
+        "bytes": 20971520,
+        "sha256": "a0dee72e755f1a00d91de7600dd06c8f2e59a6cfd8c559d4624d149d2ff07624"
+      },
+      {
+        "file": "moon-topography.glb.part-0005",
+        "bytes": 20971520,
+        "sha256": "ebe84b3d356f4b021cf97b0ddc1c177fe7a6d660094bb41e5d9ec139ea3d6c3c"
+      },
+      {
+        "file": "moon-topography.glb.part-0006",
+        "bytes": 20971520,
+        "sha256": "e961e361ee71795f51e35db5f7dfc5cd036cdd096cda34600daea6c12453bcce"
+      },
+      {
+        "file": "moon-topography.glb.part-0007",
+        "bytes": 20971520,
+        "sha256": "88995bf8c02cb10bd2c6d6515e0a600d78dbf317f6fbff5b2e72b34d4352821c"
+      },
+      {
+        "file": "moon-topography.glb.part-0008",
+        "bytes": 20971520,
+        "sha256": "6ca9946f0645eae153d344a2f830b0bbece192699b8f824c830e0006a0aca24f"
+      },
+      {
+        "file": "moon-topography.glb.part-0009",
+        "bytes": 20971520,
+        "sha256": "5906383f9e13a736cead9d2fa4472c3ed8206e2f1360986be427f63a6a588366"
+      },
+      {
+        "file": "moon-topography.glb.part-0010",
+        "bytes": 20971520,
+        "sha256": "30c2bc2d8dfccf6640c31b87a8a8c05ffd7855417dca47993f67f735ef893564"
+      },
+      {
+        "file": "moon-topography.glb.part-0011",
+        "bytes": 20971520,
+        "sha256": "4865993f62959b3762b7c26610d05f268bab17d268aff5bcc45569c2854476ef"
+      },
+      {
+        "file": "moon-topography.glb.part-0012",
+        "bytes": 20971520,
+        "sha256": "b06099eb84dcf88f5d3b85b3170f8eb81ed7e608b38414ad2de4679cf008cc6e"
+      },
+      {
+        "file": "moon-topography.glb.part-0013",
+        "bytes": 20971520,
+        "sha256": "c445f99e55244e3986f96d38b232c32311964c4f06679582f34d2b090758f363"
+      },
+      {
+        "file": "moon-topography.glb.part-0014",
+        "bytes": 20971520,
+        "sha256": "0840adc845766c78d2f5f3e9c843cedec010cb6fdc675a7ddb7392ff07fbbb88"
+      },
+      {
+        "file": "moon-topography.glb.part-0015",
+        "bytes": 19831804,
+        "sha256": "6a1c0695d4072a5f950592c01b98b195c224c62e58b849f116014642de5ca2c7"
+      }
+    ]
+  }
+}
