@@ -1,0 +1,66 @@
+{
+  "credit": "NASA's Scientific Visualization Studio; LRO/LROC/LOLA; visualization by Ernie Wright",
+  "source_page": "https://svs.gsfc.nasa.gov/4720/",
+  "color_source_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_16bit_srgb_4k.tif",
+  "height_source_url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/ldem_16_uint.tif",
+  "color_version": "NASA December 2025 color map, sRGB encoded 16-bit RGB TIFF",
+  "color_conversion": "Pillow decodes source 16-bit sRGB to 8-bit RGB; no new gamma transform, tone adjustment, or generated detail. Original embedded sRGB IEC61966-2.1 ICC profile retained. 4k JPEG quality 95, 4:4:4, progressive, optimized. 2k version resampled in linear light with Lanczos, re-encoded to sRGB; JPEG quality 94, 4:4:4, progressive, optimized.",
+  "height_conversion": "Source unsigned 16-bit LOLA elevation read without truncating precision; float32 Lanczos downsample to 2048x1024, normalized against original full source min/max, rounded to 8-bit grayscale lossless PNG. No sharpening or artificial terrain.",
+  "height_source_uint_range": [
+    2037.0,
+    41371.0
+  ],
+  "height_source_meters_relative_1737400m": [
+    -8981.5,
+    10685.5
+  ],
+  "height_span_meters": 19667.0,
+  "bump_scale_radius_one_geometric_reference": 0.011319788189248302,
+  "usage": {
+    "colorSpace": "THREE.SRGBColorSpace for JPEG color maps",
+    "bumpColorSpace": "THREE.NoColorSpace for grayscale PNG bumpMap",
+    "flipY": "Keep TextureLoader default flipY=true for standard SphereGeometry; same flipY on all maps. North is image top. No horizontal flip or channel inversion needed.",
+    "wrapS": "THREE.RepeatWrapping",
+    "wrapT": "THREE.ClampToEdgeWrapping",
+    "bumpScale": "Positive. Begin around 0.01 for radius-1 geometry, tune aesthetically; 0.025 is exaggerated. Bump changes shading only, not silhouette.",
+    "map_projection": "2:1 equirectangular, longitude 0 degrees at horizontal center, north at top. Standard unrotated Three.js SphereGeometry places this central meridian toward +X; rotate the sphere if camera is on +Z.",
+    "science_note": "NASA labels color textures as optimized for aesthetics rather than scientific measurement; original TIFF sources preserved separately."
+  },
+  "files": [
+    {
+      "file": "moon-bump-2k.png",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "mode": "L",
+      "bytes": 873896,
+      "sha256": "f1d337bd9c2e6c28cc3f1182759161350c0d7a62439a706ed19163c67fa99370"
+    },
+    {
+      "file": "moon-color-2k.jpg",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "mode": "RGB",
+      "bytes": 735062,
+      "sha256": "0fe19535e154dfda092b541067ddfeebc883a09a1e0d9769b35b558fe0e6604f"
+    },
+    {
+      "file": "moon-color-4k.jpg",
+      "dimensions": [
+        4096,
+        2048
+      ],
+      "mode": "RGB",
+      "bytes": 3155571,
+      "sha256": "b1160d7c56a89b7d1e5dfa15f70218e4d8a341d1a3810d498c0c13bdc9d52240"
+    }
+  ],
+  "total_web_image_bytes": 4764529,
+  "source_sha256": {
+    "lroc_color_16bit_srgb_4k.tif": "9731fa8af425b6c2f88f277ecca82bf8c603f3743894f64ed7b25c5bfefa22ff",
+    "ldem_16_uint.tif": "45a2b32d56e81ed30db07fead8abc842b249b6511219d9ca2c53f81bc2dc5d62"
+  }
+}
